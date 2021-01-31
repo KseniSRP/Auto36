@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Test;
 
 public class MainClassTest extends MainClass {
@@ -19,4 +20,19 @@ public class MainClassTest extends MainClass {
             System.out.println("Значение парамерта а меньше 45 (или = 45), а именно a=" + a);
         }
     }
+
+    @Test
+
+    public void testGetClassString () {
+        String string = getClassString();
+        String substring = "Hello";
+        System.out.println(string.toLowerCase().contains(substring.toLowerCase()));
+
+         if (string.toLowerCase().contains(substring.toLowerCase()) == true ) {
+           System.out.println("Слово 'Hello' присутствует в строке");
+       } else {
+            Assert.fail("В строке нет слова 'Hello'");
+            }
+        }
 }
+
